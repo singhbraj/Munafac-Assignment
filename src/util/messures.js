@@ -57,11 +57,9 @@ export const Mode = (data) =>{
         }
     }
 
-    if(modes.length === Object.keys(frequencyTable).length){
-        return 0
-    }else{
+ 
         return modes[0]
-    }
+    
 
     // return modes
 }
