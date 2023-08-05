@@ -1,46 +1,20 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Formulas : 
 
-## Available Scripts
+Mean of an array = (sum of all elements) / (number of elements)
 
-In the project directory, you can run:
+The median of a sorted array of size N is defined as the middle element when N is odd and the average of the middle two parts when N is even. Since the collection is not sorted here, we sort the array first, then apply the above formula.
 
-### `yarn start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Mode is the value that occurs most frequently in an array. For example, [6, 3, 9, 6, 6, 5, 9, 3] the Mode is 6, as it occurs most often.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `yarn test`
+Note : Mode can have multiple in an array so I just pick the first one.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `yarn build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+ScreenShots :
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![image](https://github.com/singhbraj/Munafac-Assignment/assets/42037630/a31f8340-e1fa-44f9-afe6-eaa5f7c54dd6)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+![image](https://github.com/singhbraj/Munafac-Assignment/assets/42037630/56e7a911-64b8-42cb-a06a-a8eafd58f37d)
