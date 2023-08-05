@@ -4,13 +4,15 @@ import './App.css';
 
 function App() {
 
-  const FlavanoidsClassWise = useMeanMedianMode()
-console.log(FlavanoidsClassWise)
+  const FlavanoidsClassWise = useMeanMedianMode('Flavanoids')
+  // console.log(FlavanoidsClassWise)
+  const GammaClassWise = useMeanMedianMode('Gamma')
+  // console.log(GammaClassWise)
+
   return (
     <div className="App">
-      {/* {FlavanoidsClassWise?.map((item)=>{ */}
-       <CustomTable title={"Flavanoids Measures"} data={FlavanoidsClassWise} />
-      {/* })} */}
+      {FlavanoidsClassWise   && <CustomTable title={"Flavanoids Measures"} data={FlavanoidsClassWise} />}
+      {GammaClassWise  &&<CustomTable title={"Gamma Measures"} data={GammaClassWise} />}
     </div>
   );
 }

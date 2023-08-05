@@ -3,10 +3,11 @@
 
 export const groupingData = (data) =>{
    const groupedData = data.reduce((prevData,curr)=>{
+    let Gamma = (curr.Ash*curr.Hue)/curr.Magnesium
         if(prevData[curr['Alcohol']]){
-            prevData[curr['Alcohol']] = [...prevData[curr['Alcohol']],curr]
+            prevData[curr['Alcohol']] = [...prevData[curr['Alcohol']],{...curr,Gamma}]
         }else{
-         prevData[curr['Alcohol']] = [curr]
+         prevData[curr['Alcohol']] = [{...curr,Gamma}]
         }
     return prevData
    },{})
@@ -16,9 +17,9 @@ export const groupingData = (data) =>{
 }
 
 
-export const makeArray = (data) =>{
+export const makeArray = (data,key) =>{
      return data.reduce((prev,curr)=>{
-        return prev = [...prev,curr.Flavanoids]
+        return prev = [...prev,curr[key]]
      },[])
 }
 
