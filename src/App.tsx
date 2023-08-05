@@ -1,24 +1,28 @@
 import React from 'react';
-import logo from './logo.svg';
+import {WineData} from './util/WineData'
+import { groupingData,makeArray, Mean,Median,Mode} from './util/grouping';
 import './App.css';
 
 function App() {
+
+  const groupedData =  groupingData(WineData)
+  const FlavanoidsClassWise ={}
+  const keys = Object.keys(groupedData)
+  for(const key of keys){
+    //  console.log(key)
+ 
+    const Flavanoids = makeArray(groupedData[key])
+    const mean  = Mean(Flavanoids)
+    const median = Median(Flavanoids)
+    const modes = Mode(Flavanoids)
+    console.log(mean)
+    console.log(median)
+    console.log(modes)
+  }
+// console.log(FlavanoidsClassWise)
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      Hello
     </div>
   );
 }
