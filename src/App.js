@@ -1,5 +1,5 @@
 import useMeanMedianMode from './hooks/useMeanMedianMode';
-import CustomTable from './components/Table';
+import CustomTable from './components/CustomTable';
 import './App.css';
 
 function App() {
@@ -11,8 +11,10 @@ function App() {
 
   return (
     <div className="App">
-      {FlavanoidsClassWise   && <CustomTable title={"Flavanoids Measures"} data={FlavanoidsClassWise} />}
-      {GammaClassWise  &&<CustomTable title={"Gamma Measures"} data={GammaClassWise} />}
+      {/* {FlavanoidsClassWise   && <CustomTable title={"Flavanoids Measures"} data={FlavanoidsClassWise} />}
+      {GammaClassWise  &&<CustomTable title={"Gamma Measures"} data={GammaClassWise} />} */}
+      <CustomTable title={"Flavanoids Measures"} data={FlavanoidsClassWise} name={"Flavanoids"} />
+      <CustomTable title={"Gamma Measures"} data={GammaClassWise} name={"Gamma"} />
     </div>
   );
 }

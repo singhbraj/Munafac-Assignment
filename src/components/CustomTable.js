@@ -1,14 +1,12 @@
 import { useState } from "react";
 
-const CustomTable = ({title, data }) => {
-
+const CustomTable = ({title, data,name }) => {
 
     const rowObj = {0:'mean','1':'median',2:'mode'}
 
-        
         const getTableRow = () =>{
             let tableRowsData = []
-            let rowHead = ['Flavanoids Mean', 'Flavanoids Median', 'Flavanoids Mode']
+            let rowHead = [`${name} Mean`, `${name} Median`, `${name} Mode`]
             for(let i=0; i<3; i++){
                 let propKeyValue = data.reduce((prev,curr,index)=>{
                     return prev = {...prev,[`${rowObj[i]}-${index}`]:curr[`${rowObj[i]}`]}

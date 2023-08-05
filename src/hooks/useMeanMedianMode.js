@@ -4,10 +4,10 @@ import { Mean, Median, Mode, groupingData, makeArray } from '../util/grouping'
 
 const useMeanMedianMode = (keyName) => {
 
-  const [dataForMessure,setdataForMessure] = useState()
+  // const [dataForMessure,setdataForMessure] = useState()
 
-  useEffect(()=>{
-    const getDataForMessure = () =>{
+  // useEffect(()=>{
+  //   const getDataForMessure = () =>{
       const dataForMessure= []
       const groupedData =  groupingData(WineData)
       const keys = Object.keys(groupedData)
@@ -19,11 +19,11 @@ const useMeanMedianMode = (keyName) => {
           const mode = Mode(keyData)
           dataForMessure.push({key:key,mean:mean,median:median,mode:mode})
         }
-      setdataForMessure(dataForMessure)
-    }
+      // setdataForMessure(dataForMessure)
+    // }
 
-    getDataForMessure()
-  },[keyName])
+  //   getDataForMessure()
+  // },[keyName])
 
   return dataForMessure
 
