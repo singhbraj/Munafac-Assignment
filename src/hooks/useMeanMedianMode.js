@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { WineData } from '../util/WineData'
-import { Mean, Median, Mode, groupingData, makeArray } from '../util/grouping'
+import { Mean, Median, Mode, groupingData, makeArray } from '../util/messures'
 
 const useMeanMedianMode = (keyName) => {
 
