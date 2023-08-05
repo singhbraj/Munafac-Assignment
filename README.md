@@ -12,6 +12,8 @@ Mode is the value that occurs most frequently in an array. For example, [6, 3, 9
 Note : Mode can have multiple in an array so I just pick the first one.
 
 
+Users can add more classes it's completely dynamic.
+
 
 ScreenShots :
 
