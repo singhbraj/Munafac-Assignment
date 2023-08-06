@@ -1,4 +1,5 @@
-export const WineData = [
+import { WineDataType } from "./model"
+export const WineData:WineDataType[] = [
   {
     "Alcohol": 1,
     "Malic Acid": 14.23,

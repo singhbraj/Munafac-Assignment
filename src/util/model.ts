@@ -1,17 +1,37 @@
-interface WineDatum {
+export interface WineDataType {
     Alcohol: number;
-    "Malic Acid": number;
-    Ash: number;
-    "Alcalinity of ash": number;
-    Magnesium: number;
-    "Total phenols": number;
-    Flavanoids: number;
-    "Nonflavanoid phenols": number;
-    Proanthocyanins: string; // Assuming Proanthocyanins is a string based on the provided data (".29")
-    "Color intensity": number;
-    Hue: number;
-    "OD280/OD315 of diluted wines": number;
-    Unknown: number;
+    "Malic Acid": number | string;
+    Ash: number | string;
+    "Alcalinity of ash": number | string;
+    Magnesium: number | string;
+    "Total phenols": number | string;
+    Flavanoids: number | string;
+    "Nonflavanoid phenols": number | string;
+    Proanthocyanins: string | number ; 
+    "Color intensity": number | string;
+    Hue: number | string;
+    "OD280/OD315 of diluted wines": number | string;
+    Unknown: number | string;
+    Gamma?:number
+  }
+
+
+  export interface TableRow {
+    messaure: string;
+    [key: string]: number | string;
   }
   
-  export default WineDatum;
+
+ export interface DataItem {
+    key: number;
+    mean: number;
+    median: number;
+    mode: number;
+  }
+
+  export interface CustomTableProps{
+    title:string,
+    name:string,
+    data:DataItem[]
+  }
+  
