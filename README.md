@@ -17,6 +17,7 @@ Users can add more classes it's completely dynamic.
 
 ScreenShots :
 
-![image](https://github.com/singhbraj/Munafac-Assignment/assets/42037630/a31f8340-e1fa-44f9-afe6-eaa5f7c54dd6)
+![image](https://github.com/singhbraj/Munafac-Assignment/assets/42037630/ddf4c5f2-9a89-4aad-82f6-96715e9cd040)
 
-![image](https://github.com/singhbraj/Munafac-Assignment/assets/42037630/56e7a911-64b8-42cb-a06a-a8eafd58f37d)
+
+![image](https://github.com/singhbraj/Munafac-Assignment/assets/42037630/238faed5-63f9-4caf-8a2e-292a22d78070)
