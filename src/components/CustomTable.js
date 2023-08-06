@@ -18,7 +18,7 @@ const CustomTable = ({title, data,name }) => {
             return tableRowsData
         }
         
-        const [tableRows,setTableRows] = useState(getTableRow())
+    const [tableRows,] = useState(getTableRow())
 
     const tableHead = data.reduce((prev,curr)=>{
         return prev=[...prev,`Class ${curr.key}`]

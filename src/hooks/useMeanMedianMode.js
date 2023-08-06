@@ -1,15 +1,14 @@
 import { useEffect, useState } from 'react'
-import { WineData } from '../util/WineData'
 import { Mean, Median, Mode, groupingData, makeArray } from '../util/messures'
 
-const useMeanMedianMode = (keyName) => {
+const useMeanMedianMode = (wineData,keyName) => {
 
-  // const [dataForMessure,setdataForMessure] = useState()
+  const [dataForMessure,setdataForMessure] = useState()
 
-  // useEffect(()=>{
-  //   const getDataForMessure = () =>{
+  useEffect(()=>{
+    const getDataForMessure = () =>{
       const dataForMessure= []
-      const groupedData =  groupingData(WineData)
+      const groupedData =  groupingData(wineData)
       const keys = Object.keys(groupedData)
      
       for(const key of keys){
@@ -19,11 +18,11 @@ const useMeanMedianMode = (keyName) => {
           const mode = Mode(keyData)
           dataForMessure.push({key:key,mean:mean,median:median,mode:mode})
         }
-      // setdataForMessure(dataForMessure)
-    // }
+      setdataForMessure(dataForMessure)
+    }
 
-  //   getDataForMessure()
-  // },[keyName])
+    getDataForMessure()
+  },[wineData,keyName])
 
   return dataForMessure
 
