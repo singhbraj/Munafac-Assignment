@@ -1,15 +1,17 @@
 import { useState } from "react";
+import { CustomTableProps, TableRow, DataItem } from "../util/model";
 
-const CustomTable = ({title, data,name }) => {
 
-    const rowObj = {0:'mean','1':'median',2:'mode'}
+const CustomTable:React.FC<CustomTableProps> = ({title, data,name }) => {
 
-        const getTableRow = () =>{
-            let tableRowsData = []
+    const rowObj: { [key: number]: string } = {0:'mean','1':'median',2:'mode'}
+
+        const getTableRow = (): TableRow[]  =>{
+            let tableRowsData : TableRow[] = []
             let rowHead = [`${name} Mean`, `${name} Median`, `${name} Mode`]
             for(let i=0; i<3; i++){
                 let propKeyValue = data.reduce((prev,curr,index)=>{
-                    return prev = {...prev,[`${rowObj[i]}-${index}`]:curr[`${rowObj[i]}`]}
+                    return prev = {...prev,[`${rowObj[i]}-${index}`]:curr[`${rowObj[i]}` as keyof DataItem]}
                 },{})
                 let obj ={messaure:rowHead[i],...propKeyValue}
                 tableRowsData.push(obj)
@@ -18,7 +20,7 @@ const CustomTable = ({title, data,name }) => {
             return tableRowsData
         }
         
-    const [tableRows,] = useState(getTableRow())
+    const [tableRows] = useState<TableRow[]>(getTableRow())
 
     const tableHead = data.reduce((prev,curr)=>{
         return prev=[...prev,`Class ${curr.key}`]
@@ -27,13 +29,15 @@ const CustomTable = ({title, data,name }) => {
 
 
 
-    const getTableColumnData = (item, index) => {
+    const getTableColumnData = (item:TableRow, index:number) => {
 
-        let tdData = tableHead.slice(1).map((_, idx) => (
-          <td key={`${index}-${idx}`}>
-            {item[`${rowObj[index]}-${idx}`]?.toFixed(3)}
+        let tdData = tableHead.slice(1).map((_, idx) => {
+          const value = item[`${rowObj[index]}-${idx}`];
+          const formattedValue = typeof value === "number" ? Number.isInteger(value) ? value : value.toFixed(3) : value;
+         return <td key={`${index}-${idx}`}>
+            {formattedValue}
           </td>
-        ));
+        });
         return tdData;
       };
 
