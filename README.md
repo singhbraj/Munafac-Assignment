@@ -9,7 +9,7 @@ The median of a sorted array of size N is defined as the middle element when N i
 Mode is the value that occurs most frequently in an array. For example, [6, 3, 9, 6, 6, 5, 9, 3] the Mode is 6, as it occurs most often.
 
 
-Note: Mode can have multiple in an array so I just pick the first one.
+Note: Mode can be multiple in an array so I just pick the first one.
 
 
 Users can add more classes it's completely dynamic.
